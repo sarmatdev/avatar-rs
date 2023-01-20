@@ -1,0 +1,3 @@
+fn main() {
+    println!("avatar ⬛🦀");
+}
