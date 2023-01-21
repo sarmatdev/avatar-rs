@@ -1,10 +1,8 @@
 use clap::{App, Arg};
 use image;
 
+pub mod constants;
 pub mod helpers;
-
-const WIDTH: u32 = 600;
-const HEIGHT: u32 = 600;
 
 fn main() {
     let version = helpers::get_cargo_toml_version();
@@ -36,12 +34,12 @@ fn main() {
 
     let width = matches
         .value_of("width")
-        .unwrap_or(&WIDTH.to_string())
+        .unwrap_or(&constants::WIDTH.to_string())
         .parse::<u32>()
         .unwrap();
     let height = matches
         .value_of("height")
-        .unwrap_or(&HEIGHT.to_string())
+        .unwrap_or(&constants::HEIGHT.to_string())
         .parse::<u32>()
         .unwrap();
 
