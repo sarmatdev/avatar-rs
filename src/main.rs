@@ -1,12 +1,16 @@
 use clap::{App, Arg};
 use image;
 
+pub mod helpers;
+
 const WIDTH: u32 = 600;
 const HEIGHT: u32 = 600;
 
 fn main() {
+    let version = helpers::get_cargo_toml_version();
+
     let matches = App::new("Avatar image creator")
-        .version("0.1.0")
+        .version(version.as_str())
         .author("Sarmat")
         .args_from_usage(
             "-w --width 'Image width'
