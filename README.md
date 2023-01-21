@@ -20,7 +20,13 @@ cd avatar-rs
 and run program.
 
 ```
-cargo run
+cargo build --release
 ```
 
-🪄 Image located on root level in folder 🪄
+Then run
+
+```
+cargo install --path .
+```
+
+3. Run `avatar` and voilà! 🪄
